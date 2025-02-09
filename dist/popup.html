@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Screenshot</title>
+    <style>
+        /* Reset some default styles */
+        body,
+        h1,
+        button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Set the body styles */
+        body {
+            width: 300px;
+            /* Increased width for better layout */
+            font-family: 'Arial', sans-serif;
+            /* Clean font */
+            background-color: #ffffff;
+            /* White background for contrast */
+            color: #333;
+            /* Dark text color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+            /* Adjusted height for better spacing */
+            border-radius: 10px;
+            /* Rounded corners */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            /* Soft shadow for depth */
+            padding: 20px;
+            /* Inner spacing */
+            transition: transform 0.2s;
+            /* Animation for hover effect */
+        }
+
+        /* Scale effect on hover */
+        body:hover {
+            transform: scale(1.02);
+            /* Slightly enlarge the popup on hover */
+        }
+
+        /* Style the header */
+        h1 {
+            font-size: 24px;
+            /* Larger header size */
+            margin-bottom: 20px;
+            /* Space between header and buttons */
+            text-align: center;
+            /* Center the header text */
+            color: #007bff;
+            /* Primary color for header */
+        }
+
+        /* Style buttons */
+        button {
+            background-color: #007bff;
+            /* Bootstrap primary color */
+            color: white;
+            /* White text color */
+            border: none;
+            border-radius: 5px;
+            /* Rounded corners */
+            padding: 12px 20px;
+            /* Increased padding for buttons */
+            cursor: pointer;
+            /* Change cursor on hover */
+            margin: 5px;
+            /* Space between buttons */
+            font-size: 16px;
+            /* Button font size */
+            width: 100%;
+            /* Full width for buttons */
+            transition: background-color 0.3s, transform 0.2s;
+            /* Animation for hover */
+        }
+
+        /* Change button color on hover */
+        button:hover {
+            background-color: #0056b3;
+            /* Darker blue on hover */
+            transform: translateY(-2px);
+            /* Slightly lift the button on hover */
+        }
+
+        /* Style for hidden button */
+        button:disabled {
+            background-color: #cccccc;
+            /* Gray color for disabled button */
+            cursor: not-allowed;
+            /* Change cursor for disabled state */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Instant Screenshots</h1>
+    <button id="start-session">Start Session</button>
+    <button id="stop-session" style="display: none;">Stop Session</button>
+    <script src="popup.bundle.js"></script> <!-- Update this to your bundled JS file path -->
+</body>
+
+</html>
